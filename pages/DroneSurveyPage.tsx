@@ -139,7 +139,7 @@ const DroneSurveyPage: React.FC = () => {
                 </div>
                 <div className="lg:w-1/2">
                      <img 
-                        src="https://images.unsplash.com/photo-1542036491-1648a1b5d624?q=80&w=2072&auto=format&fit=crop" 
+                        src="/assets/village.jpg" 
                         alt="Drone image of a village"
                         className="rounded-xl shadow-2xl object-cover w-full h-full"
                     />
