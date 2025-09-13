@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FRA Atlas and Decision Support System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.0",
+    "@google/genai": "https://esm.sh/@google/genai"
+  }
+}
+</script>
+  <style>
+    /* For scroll-triggered animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .fade-in-section {
+      animation: fadeIn 0.8s ease-out forwards;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    @keyframes pulse-subtle {
+      0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      }
+      50% {
+        transform: scale(1.1);
+        box-shadow: 0 20px 25px -5px rgba(249, 115, 22, 0.3), 0 10px 10px -5px rgba(249, 115, 22, 0.2);
+      }
+    }
+    .animate-pulse-subtle {
+      animation: pulse-subtle 2s infinite cubic-bezier(0.4, 0, 0.6, 1);
+    }
+    @keyframes pulse-border {
+      0%, 100% {
+        stroke-opacity: 1;
+      }
+      50% {
+        stroke-opacity: 0.5;
+      }
+    }
+    .animate-pulse-border {
+      animation: pulse-border 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    @keyframes slide-in-up {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .animate-slide-in-up {
+      animation: slide-in-up 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    }
+    @keyframes slide-down-navbar {
+      from {
+        opacity: 0;
+        transform: translateY(-100%);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes menu-fade-in {
+      from {
+        opacity: 0;
+        transform: scale(0.98);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+    /* Starfield background effect */
+    @keyframes twinkle {
+      0%, 100% { opacity: var(--star-opacity, 0.2); }
+      50% { opacity: var(--star-opacity-twinkle, 0.8); }
+    }
+    .star {
+      position: absolute;
+      background-color: white;
+      border-radius: 50%;
+      animation: twinkle linear infinite;
+    }
+    
+    /* --- New Scroll Animations --- */
+    @keyframes flip-in-x {
+        from {
+            transform: perspective(1000px) rotateX(-80deg);
+            opacity: 0;
+        }
+        to {
+            transform: perspective(1000px) rotateX(0);
+            opacity: 1;
+        }
+    }
+    .animate-flip-in-x {
+        animation: flip-in-x 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+
+    @keyframes slide-in-stagger {
+        from {
+            transform: translateX(-50px) rotate(-5deg);
+            opacity: 0;
+        }
+        to {
+            transform: translateX(0) rotate(0);
+            opacity: 1;
+        }
+    }
+    .animate-slide-in-stagger {
+         animation: slide-in-stagger 0.7s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+    }
+    
+    @keyframes zoom-in-reveal {
+        from {
+            transform: scale(0.9);
+            opacity: 0;
+        }
+        to {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+    .animate-zoom-in-reveal {
+        animation: zoom-in-reveal 0.6s ease-out forwards;
+    }
+
+  </style>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-slate-50">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

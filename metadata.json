@@ -1,0 +1,5 @@
+{
+  "name": "FRA Atlas and Decision Support System",
+  "description": "An interactive WebGIS portal to digitize, visualize, and manage Forest Rights Act (FRA) data. Integrates AI-based asset mapping and a Decision Support System (DSS) to layer Central Sector Schemes for FRA patta holders.",
+  "requestFramePermissions": []
+}
