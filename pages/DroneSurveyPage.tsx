@@ -73,7 +73,7 @@ const DroneSurveyPage: React.FC = () => {
           </div> 
           <div className="flex flex-wrap items-center justify-center gap-12">
             <div className="w-full md:w-1/2 lg:w-2/5">
-                <img src="/assets/umRa8f89.webp" alt="H35 Drone" className="rounded-xl shadow-2xl w-full" />
+                <img src="/assets/20tcGsp5-800-800.jpg" alt="H35 Drone" className="rounded-xl shadow-2xl w-full" />
             </div>
             <div className="w-full md:w-1/2 lg:w-2/5 space-y-8">
                 <div>
