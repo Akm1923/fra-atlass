@@ -7,6 +7,7 @@ import SummaryStats from '../components/gis/SummaryStats';
 import MapLegend from '../components/gis/MapLegend';
 import { SearchIcon } from '../components/icons/SearchIcon';
 import StarsBackground from '../components/effects/StarsBackground';
+// import bgMap from "../assets/blog3_2.png"
 
 // Helper component for layer toggles
 const LayerToggle: React.FC<{
@@ -132,13 +133,16 @@ const GISPage: React.FC = () => {
       
       {/* Main Map & Community Area (Scrollable) */}
       <div id="map-view" className="flex-grow relative overflow-y-auto">
-        <div className="relative w-full h-[70vh] min-h-[500px] bg-slate-700">
+<div
+  className="relative w-full h-[70vh] min-h-[500px] bg-cover bg-center"
+  style={{ backgroundImage: "url('https://www.startupindia.gov.in/content/dam/invest-india/Blogs/blog3_2.png')" }}
+>
             <svg
             className="w-full h-full"
             viewBox="0 0 600 500"
             preserveAspectRatio="xMidYMid meet"
             >
-                <rect width="100%" height="100%" fill="#334155" /> 
+                <rect  fill="#334155" /> 
 
                 {/* --- MAP LAYERS --- */}
                 {layers.water && (
